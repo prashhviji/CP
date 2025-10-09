@@ -1,25 +1,25 @@
 # 84. Largest Rectangle in Histogram
 
-**Link:** https://leetcode.com/problems/largest-rectangle-in-histogram/submissions/1795683541/
+**Link:** https://leetcode.com/problems/largest-rectangle-in-histogram/submissions/1796551907/
 
 Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
 
 ```java
+            }
+            stack.push(i);
         }
-        lessFromLeft[i] = p;
-            p = lessFromLeft[p];
 
-        while (p >= 0 && height[p] >= height[i]) {
-        int p = i - 1;
-    for (int i = 1; i < height.length; i++) {
+                int height = heights[stack.pop()];
+                int width = i - stack.peek() - 1;
+                maxArea = Math.max(maxArea, height * width);
+        for (int i = 0; i < heights.length; i++) {
+            while (stack.peek() != -1 && heights[i] <= heights[stack.peek()]) {
+    public int largestRectangleArea(int[] heights) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(-1);
+        int maxArea = 0;
 
-    lessFromLeft[0] = -1;
-    lessFromRight[height.length - 1] = height.length;
-    int[] lessFromRight = new int[height.length]; 
-    int[] lessFromLeft = new int[height.length]; 
-    }
-        return 0;
-    if (height == null || height.length == 0) {
-    public static int largestRectangleArea(int[] height) {
+import java.util.Stack;
+
 class Solution {
 ```
