@@ -1,6 +1,6 @@
 # 1513. Number of Substrings With Only 1s
 
-**Link:** https://leetcode.com/problems/number-of-substrings-with-only-1s/submissions/1831077576/
+**Link:** https://leetcode.com/problems/number-of-substrings-with-only-1s/submissions/1832600079/
 
 Given a binary string s, return the number of substrings with all characters 1's. Since the answer may be too large, return it modulo 109 + 7.
 
@@ -18,4 +18,5 @@ Given a binary string s, return the number of substrings with all characters 1's
         return (int) total;
     }
 }
+class Solution {
 ```
