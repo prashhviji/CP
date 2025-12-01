@@ -1,6 +1,6 @@
 # 110. Balanced Binary Tree
 
-**Link:** https://leetcode.com/problems/balanced-binary-tree/submissions/1807185464/
+**Link:** https://leetcode.com/problems/balanced-binary-tree/
 
 Given a binary tree, determine if it is height-balanced.
 
@@ -18,4 +18,5 @@ Given a binary tree, determine if it is height-balanced.
         return Math.max(leftHeight, rightHeight) + 1;
     }
 }
+    }
 ```
