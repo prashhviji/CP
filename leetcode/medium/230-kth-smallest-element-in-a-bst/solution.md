@@ -1,13 +1,10 @@
 # 230. Kth Smallest Element in a BST
 
-**Link:** https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
+**Link:** https://leetcode.com/problems/kth-smallest-element-in-a-bst/submissions/1862082155/
 
 Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
 
 ```java
-    private int result = 0;
-    public int kthSmallest(TreeNode root, int k) {
-        inorder(root, k);
         return result;
     }
     private void inorder(TreeNode node, int k){
@@ -19,7 +16,7 @@ Given the root of a binary search tree, and an integer k, return the kth smalles
             return;
         }
         inorder(node.right,k);
+        inorder(root, k);
     }
-}
-    private int count = 0;
+};
 ```
