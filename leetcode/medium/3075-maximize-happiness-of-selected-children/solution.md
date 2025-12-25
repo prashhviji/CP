@@ -1,0 +1,23 @@
+# 3075. Maximize Happiness of Selected Children
+
+**Link:** https://leetcode.com/problems/maximize-happiness-of-selected-children/submissions/1865147962/
+
+You are given an array happiness of length n, and a positive integer k. There are n children standing in a queue, where the ith child has happiness value happiness[i]. You want to select k children from these n children in k turns. In each turn, when you select a child, the happiness value of all the children that have not been selected till now decreases by 1. Note that the happiness value cannot become negative and gets decremented only if it is positive. Return the maximum sum of the happiness values of the selected children you can achieve by selecting k children.
+
+```java
+class Solution {
+    public long maximumHappinessSum(int[] happiness, int k) {
+        Arrays.sort(happiness);
+        int count = 0;
+        long res = 0;
+        for(int i=happiness.length-1;i>=happiness.length-k;i--){
+            if(happiness[i] + count > 0){
+                res+=(long)(happiness[i] + count);
+            }
+            count--;
+        }
+
+        return res;
+    }
+}
+```
